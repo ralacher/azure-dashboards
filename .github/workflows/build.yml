@@ -29,4 +29,7 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Continuous Integration"
-        git add . && git commit -m "Added widgets" && git push
+        output=$(git status -s)
+        if [ ${#output} -gt 0 ]; then
+          git add . && git commit -m "Added widgets" && git push
+        fi
