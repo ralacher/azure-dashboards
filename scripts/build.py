@@ -30,6 +30,15 @@ def test_urls(json_data):
     return True
 
 '''
+Delete existing markdown files prior to building new ones
+'''
+def clean():
+    files = os.listdir('widgets')
+    for file in files:
+        if file.endswith('.md'):
+            os.remove('widgets/{}'.format(file))
+
+'''
 Arbitrary checks
 '''
 def test_data(json_data):
@@ -52,6 +61,7 @@ if __name__ == '__main__':
     arm_template_data = None
     with open('widgets/templates/deployTemplate.json', 'r') as file_object:
         arm_template_data = json.load(file_object)
+        clean()
 
         x_pos = 3
         y_pos = 0
