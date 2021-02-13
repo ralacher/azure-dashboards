@@ -8,7 +8,6 @@ Simple Python web application using the Django framework. Demo leverages App Ser
   </a>
   <img src="https://img.shields.io/badge/Time-5 minutes-success" />
 </span>
-
 <!-- Row 3 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="https://docs.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app">

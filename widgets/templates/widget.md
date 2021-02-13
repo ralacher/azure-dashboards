@@ -8,7 +8,6 @@
   </a>
   <img src="https://img.shields.io/badge/Time-{{ time }} minutes-{% if time < 10 %}success{% elif time < 30 %}orange{% else %}critical{% endif %}" />
 </span>
-
 <!-- Row 3 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="{{ documentationLink }}">

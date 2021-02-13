@@ -8,7 +8,6 @@ Sample application to demonstrate a public nuisance reporting solution using the
   </a>
   <img src="https://img.shields.io/badge/Time-5 minutes-success" />
 </span>
-
 <!-- Row 3 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="https://github.com/mullis623/iPaaSDemo/blob/main/README.md">
