@@ -16,7 +16,7 @@ def write_widget(file_name, rendered_template):
 Reads a .json file from widgets/json/
 '''
 def read_widget(file_name):
-    with open('widgets/json/{}'.format(file_name)) as file_object:
+    with open('data/{}'.format(file_name)) as file_object:
         return json.load(file_object)
 
 '''
@@ -50,7 +50,7 @@ def test_data(json_data):
 if __name__ == '__main__':
 
     # jinja2 setup
-    loader = jinja2.FileSystemLoader('widgets/templates')
+    loader = jinja2.FileSystemLoader('templates')
     environment = jinja2.Environment(loader=loader)
 
     # jinja2 template setup
@@ -59,13 +59,13 @@ if __name__ == '__main__':
 
     # ARM template
     arm_template_data = None
-    with open('widgets/templates/deployTemplate.json', 'r') as file_object:
+    with open('templates/deployTemplate.json', 'r') as file_object:
         arm_template_data = json.load(file_object)
         clean()
 
         x_pos = 3
         y_pos = 0
-        for index, widget in enumerate(os.listdir('widgets/json')):
+        for index, widget in enumerate(os.listdir('data')):
             widget_name = widget.replace('.json', '')
             json_data = read_widget(widget)
             
