@@ -23,7 +23,7 @@
   <a target="_self" href="">
     <img height="25px" src="https://static.djangoproject.com/img/logos/django-logo-negative.png">
   </a>
-  <a href="mailto:?subject={{ title }}-{{ subtitle }}&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0A{{ documentationLink | urlencode | replace ("/", "%2F") }}%0A%0AGitHub Code%0A{{ githubLink | urlencode | replace ("/", "%2F") }}%0A%0ACost Estimate%0A{{ costLink | urlencode | replace ("/", "%2F") }}">
+  <a href="mailto:?subject={{ title }}-{{ subtitle }}&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0A{{ documentationLink | urlencode | replace ("/", "%2F") }}%0A%0AGitHub%20Code%0A{{ githubLink | urlencode | replace ("/", "%2F") }}%0A%0ACost%20Estimate%0A{{ costLink | urlencode | replace ("/", "%2F") }}">
     <img src="https://img.shields.io/badge/Share-informational?logo=mail.ru" height="25px"/>
   </a>
   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{ armLink | urlencode | replace("/", "%2F") }}" target="_blank">
