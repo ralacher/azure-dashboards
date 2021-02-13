@@ -13,6 +13,9 @@ Python App Service, PostgreSQL Flexible Server, and GitHub Actions
   <img height="25px" src="https://static.djangoproject.com/img/logos/django-logo-negative.png">
 </a>
 <br/>
+
+
+<img src="https://img.shields.io/badge/Cost-$50/month-success" /><img src="https://img.shields.io/badge/Time-10 minutes-orange" /><br/>
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fralacher%2Fdjangoapp%2Fmaster%2Farm-templates%2Fazuredeploy.json" target="_blank">
-  <img height="25px" src="https://aka.ms/deploytoazurebutton"/>
+  <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
