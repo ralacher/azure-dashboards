@@ -4,7 +4,7 @@
   "parameters": {
     "dashboardName": {
       "type": "string",
-      "defaultValue": "[resourceGroup().name]",
+      "defaultValue": "Home",
       "metadata": {
         "description": "The name of the dashboard"
       }
