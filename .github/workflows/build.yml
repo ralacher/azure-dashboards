@@ -4,7 +4,9 @@
 name: Build Markdown widgets
 
 on:
-  workflow_dispatch:
+  push:
+    branches-ignore: 
+      - main
 
 jobs:
   Build:
