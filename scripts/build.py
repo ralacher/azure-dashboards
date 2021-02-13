@@ -92,4 +92,4 @@ if __name__ == '__main__':
             arm_template_data['resources'][0]['properties']['lenses']['0']['parts'][arm_index] = rendered_arm
 
     with open('arm-templates/deployTemplate.json', 'w') as file_object:
-        json.dump(arm_template_data, file_object)
+        json.dump(arm_template_data, file_object, indent=4)
