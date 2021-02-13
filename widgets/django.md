@@ -1,7 +1,7 @@
 Simple Python web application using the Django framework. Demo leverages App Services, Key Vault, Storage, and Azure Database for PostgreSQL. 
 
 <span style="display:block;text-align:center">
-<a href="https://azure.com/e/adda9f225d3743dead44e17e7908d1e5"><img src="https://img.shields.io/badge/Cost-$302/month-inactive" /></a>
+<a href="https://azure.com/e/adda9f225d3743dead44e17e7908d1e5"><img src="https://img.shields.io/badge/Cost-$302/month-orange" /></a>
 <img src="https://img.shields.io/badge/Time-10 minutes-orange" />
 </span>
 
