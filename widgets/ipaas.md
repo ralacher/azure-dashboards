@@ -1,4 +1,4 @@
-Sample application to demonstrate a public nuisance reporting use case. A Power App submits complaints from citizens, uses image recognition to triage, and stores the complaints in a database.
+Sample application to demonstrate a public nuisance reporting solution using the Power Platform and Azure integration technologies.
 
 <span style="display:block;text-align:center">
 <a href="https://azure.com/e/adda9f225d3743dead44e17e7908d1e5"><img src="https://img.shields.io/badge/Cost-$102/month-success" /></a>
