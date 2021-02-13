@@ -23,7 +23,7 @@ Simple Python web application using the Django framework. Demo leverages App Ser
   <a target="_self" href="">
     <img height="25px" src="https://static.djangoproject.com/img/logos/django-logo-negative.png">
   </a>
-  <a href="mailto:robertlacher@microsoft.com?subject=Deploying Django in Azure&body=Please%20find%20references%20and%20links%20for%20the%20Django%20on%20App%20Services%20demo%20that%20we%20discussed.%0AGitHub%20repository%0Ahttps%3A%2F%2Fgithub.com%2Fralacher%2Fazure-dashboards%2Fblob%2Fmain%2Fwidgets%2Fdjango.md%0AAzure%20Pricing%20Calculator%0Ahttps%3A%2F%2Fazure.com%2Fe%2Fadda9f225d3743dead44e17e7908d1e5%0AMicrosoft%20Documentation%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fapp-service%2Ftutorial-python-postgresql-app">
+  <a href="mailto:?subject=Django-Azure App Services&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fapp-service%2Ftutorial-python-postgresql-app%0A%0AGitHub Code%0Ahttps%3A%2F%2Fgithub.com%2Fralacher%2Fdjangoapp%0A%0ACost Estimate%0Ahttps%3A%2F%2Fazure.com%2Fe%2F387d14da667d4363ab0c75c809ea49b3">
     <img src="https://img.shields.io/badge/Share-informational?logo=mail.ru" height="25px"/>
   </a>
   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fralacher%2Fdjangoapp%2Fmaster%2Farm-templates%2Fazuredeploy.json" target="_blank">
