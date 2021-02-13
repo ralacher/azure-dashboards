@@ -1,14 +1,4 @@
-<!-- Row 1 - Demo description -->
-Simple Python web application using the Django framework. Demo leverages App Services, Key Vault, Storage, and Azure Database for PostgreSQL.
-
-<!-- Row 2 - Shields to display demo information -->
-<span style="display:block;text-align:center">
-  <a href="https://azure.com/e/387d14da667d4363ab0c75c809ea49b3">
-    <img src="https://img.shields.io/badge/Cost-$92/month-success" />
-  </a>
-  <img src="https://img.shields.io/badge/Time-5 minutes-success" />
-</span>
-<!-- Row 3 - Links to Azure documentation, GitHub, and Share -->
+<!-- Row 1 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="https://docs.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app">
     <img width="25px" src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Microsoft-Logo-Icon-PNG-Transparent.png">
@@ -26,3 +16,13 @@ Simple Python web application using the Django framework. Demo leverages App Ser
     <img height="25px" src="https://aka.ms/deploytoazurebutton"/>
   </a>
 </span>
+<!-- Row 2 - Shields to display demo information -->
+<span style="display:block;text-align:center">
+  <a href="https://azure.com/e/387d14da667d4363ab0c75c809ea49b3">
+    <img src="https://img.shields.io/badge/Cost-$92/month-success" />
+  </a>
+  <img src="https://img.shields.io/badge/Time-5 minutes-success" />
+</span>
+
+<!-- Row 3 - Demo description -->
+Simple Python web application using the Django framework. Demo leverages App Services, Key Vault, Storage, and Azure Database for PostgreSQL.

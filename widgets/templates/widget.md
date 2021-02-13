@@ -1,14 +1,4 @@
-<!-- Row 1 - Demo description -->
-{{ description }}
-
-<!-- Row 2 - Shields to display demo information -->
-<span style="display:block;text-align:center">
-  <a href="{{ costLink }}">
-    <img src="https://img.shields.io/badge/Cost-${{ cost }}/month-{% if cost < 101 %}success{% elif cost < 1000 %}orange{% else %}critical{% endif %}" />
-  </a>
-  <img src="https://img.shields.io/badge/Time-{{ time }} minutes-{% if time < 10 %}success{% elif time < 30 %}orange{% else %}critical{% endif %}" />
-</span>
-<!-- Row 3 - Links to Azure documentation, GitHub, and Share -->
+<!-- Row 1 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="{{ documentationLink }}">
     <img width="25px" src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Microsoft-Logo-Icon-PNG-Transparent.png">
@@ -26,3 +16,13 @@
     <img height="25px" src="https://aka.ms/deploytoazurebutton"/>
   </a>
 </span>
+<!-- Row 2 - Shields to display demo information -->
+<span style="display:block;text-align:center">
+  <a href="{{ costLink }}">
+    <img src="https://img.shields.io/badge/Cost-${{ cost }}/month-{% if cost < 101 %}success{% elif cost < 1000 %}orange{% else %}critical{% endif %}" />
+  </a>
+  <img src="https://img.shields.io/badge/Time-{{ time }} minutes-{% if time < 10 %}success{% elif time < 30 %}orange{% else %}critical{% endif %}" />
+</span>
+
+<!-- Row 3 - Demo description -->
+{{ description }}
