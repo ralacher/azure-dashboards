@@ -24,5 +24,5 @@ Simple Python web application using the Django framework. Demo leverages App Ser
 <a target="_self" href="">
   <img height="25px" src="https://static.djangoproject.com/img/logos/django-logo-negative.png">
 </a>
-  <a href="mailto:robertlacher@microsoft.com?subject=Deploying Django in Azure&body=Hello,</br>References: <br/>Estimated cost: $302/month<br/>"><img src="https://img.shields.io/badge/Share-informational?logo=mail.ru" /></a>
+  <a href="mailto:robertlacher@microsoft.com?subject=Deploying Django in Azure&body=Hello,</br>References: <br/>Estimated cost: $302/month<br/>"><img src="https://img.shields.io/badge/Share-informational?logo=mail.ru" height="25px"/></a>
   </span>
