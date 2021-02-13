@@ -26,4 +26,7 @@ jobs:
     - name: Build
       run: python scripts/build.py
     - name: Commit changes
-      run: git add . && git commit -m "Added widgets" && git push
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Continuous Integration"
+        git add . && git commit -m "Added widgets" && git push
