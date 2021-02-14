@@ -1,0 +1,12 @@
+{
+  "name": "ipaas",
+  "title": "iPaaS",
+  "subtitle": "Integration Platform as a Service",
+  "description": "Sample application to demonstrate a public nuisance reporting solution using the Power Platform and Azure integration technologies.",
+  "cost": 92,
+  "time": 5,
+  "costLink": "https://azure.com/e/387d14da667d4363ab0c75c809ea49b3",
+  "armLink": "https://raw.githubusercontent.com/mullis623/iPaaSDemo/main/ArmTemplates/deployTemplate.json",
+  "documentationLink": "https://github.com/mullis623/iPaaSDemo/blob/main/README.md",
+  "githubLink": "https://github.com/mullis623/iPaaSDemo/"
+}
