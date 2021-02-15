@@ -15,7 +15,7 @@
       "apiVersion": "2019-01-01-preview",
       "name": "[parameters('dashboardName')]",
       "type": "Microsoft.Portal/dashboards",
-      "location": "[resourceGroup().name]",
+      "location": "[resourceGroup().location]",
       "tags": {
         "hidden-title": "[parameters('dashboardName')]"
       },
