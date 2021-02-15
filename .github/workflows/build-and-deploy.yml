@@ -6,21 +6,20 @@ name: Build
 on:
   pull_request:
     paths:
-      - arm-templates
-      - data
-      - scripts
-      - templates
-      - widgets
+      - 'arm-templates/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'templates/**'
+      - 'widgets/**'
   push:
     branches:
       - main
     paths:
-      - arm-templates
-      - data
-      - scripts
-      - templates
-      - widgets
-    
+      - 'arm-templates/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'templates/**'
+      - 'widgets/**'    
 env:
   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
   SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
