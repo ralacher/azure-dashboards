@@ -73,6 +73,6 @@ jobs:
         region: eastus2
         resourceGroupName: dashboards
         template: arm-templates/deployTemplate.json
-        deploymentMode: Validate
+        deploymentMode: Incremental
         deploymentName: Dashboard
 
