@@ -4,16 +4,7 @@
 name: Build
 
 on:
-  pull_request:
-    paths:
-      - 'arm-templates/**'
-      - 'data/**'
-      - 'scripts/**'
-      - 'templates/**'
-      - 'widgets/**'
   push:
-    branches:
-      - main
     paths:
       - 'arm-templates/**'
       - 'data/**'
