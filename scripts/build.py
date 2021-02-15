@@ -79,7 +79,7 @@ if __name__ == '__main__':
             if arm_index % 3 == 0:
                 x_pos += 3
                 y_pos = 0
-            arm_template_data['properties']['lenses']['0']['parts'][arm_index] = rendered_arm
+            arm_template_data['resources'][0]['properties']['lenses']['0']['parts'][arm_index] = rendered_arm
 
     with open('arm-templates/deployTemplate.json', 'w') as file_object:
         json.dump(arm_template_data, file_object)
