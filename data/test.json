@@ -4,7 +4,7 @@
   "subtitle": "Azure App Services",
   "description": "Simple Python web application using the Django framework. Demo leverages App Services, Key Vault, Storage, and Azure Database for PostgreSQL.",
   "cost": 1500,
-  "time": 65,
+  "time": 70,
   "costLink": "https://azure.com/e/387d14da667d4363ab0c75c809ea49b3",
   "armLink": "https://raw.githubusercontent.com/ralacher/djangoapp/master/arm-templates/azuredeploy.json",
   "documentationLink": "https://docs.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app",
