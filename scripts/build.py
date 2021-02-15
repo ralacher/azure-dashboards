@@ -40,18 +40,46 @@ def test_data(json_data):
 
 if __name__ == '__main__':
 
+    # jinja2 setup
     loader = jinja2.FileSystemLoader('widgets/templates')
     environment = jinja2.Environment(loader=loader)
-    template = environment.get_template('widget.md')
 
-    for widget in os.listdir('widgets/json'):
-        widget_name = widget.replace('.json', '')
-        json_data = read_widget(widget)
-        
-        is_valid = test_urls(json_data)
-        if is_valid is not True:
-            print('{} returned a {} status code'.format(is_valid[0], is_valid[1]))
-            continue
+    # jinja2 template setup
+    widget_template = environment.get_template('widget.md')
+    dashboard_widget = environment.get_template('widget.json')
 
-        rendered_template = template.render(json_data)
-        write_widget(widget_name, rendered_template)
+    # ARM template
+    arm_template_data = None
+    with open('widgets/templates/deployTemplate.json', 'r') as file_object:
+        arm_template_data = json.load(file_object)
+
+        x_pos = 3
+        y_pos = 0
+        for index, widget in enumerate(os.listdir('widgets/json')):
+            widget_name = widget.replace('.json', '')
+            json_data = read_widget(widget)
+            
+            is_valid = test_urls(json_data)
+            if is_valid is not True:
+                print('{} returned a {} status code'.format(is_valid[0], is_valid[1]))
+                continue
+
+            # Render the markdown widget and write the file
+            rendered_widget = widget_template.render(json_data)
+            write_widget(widget_name, rendered_widget)
+
+            # Render the ARM template
+            arm_index = index + 1
+            rendered_arm = json.loads(
+                    dashboard_widget.render(
+                        json_data, index=arm_index, x=x_pos, y=y_pos, widgetName='{}.md'.format(widget_name)))
+
+            # Increment x and y position to place the next widgets
+            y_pos += 3
+            if arm_index % 3 == 0:
+                x_pos += 3
+                y_pos = 0
+            arm_template_data['properties']['lenses']['0']['parts'][arm_index] = rendered_arm
+
+    with open('arm-templates/deployTemplate.json', 'w') as file_object:
+        json.dump(arm_template_data, file_object)

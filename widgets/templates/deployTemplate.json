@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 3,
+              "rowSpan": 9
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/HubsExtension/PartType/MarkdownPart",
+              "settings": {
+                "content": {
+                  "settings": {
+                    "content": "Links to demo resource groups, tutorials, and training exercises.\n<img src=\"https://msdnshared.blob.core.windows.net/media/2017/05/Webinar-cloud.png\">\n\n### ARM Templates\n[Quickstart Templates](https://github.com/Azure/azure-quickstart-templates)\n<br>\n[Functions Reference](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions)\n<br>\n[Deploy with GitHub](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-github-actions)\n<br>\n[Deploy with Azure DevOps](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines)\n\n### Azure DevOps\n[Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/)\n\n### Learning\n[Microsoft Learn](https://docs.microsoft.com/en-us/learn/)\n<br>\n[Azure DevOps Labs](http://azuredevopslabs.com/)",
+                    "title": "Demos ",
+                    "subtitle": "and Tutorials",
+                    "markdownSource": 1,
+                    "markdownUri": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        }
+      }
+    }
+  },
+  "name": "Home",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "Home"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
