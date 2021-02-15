@@ -8,6 +8,7 @@ on:
     paths: 
       - widgets/json/*
       - widgets/templates/*
+      - scripts/build.py
     branches-ignore: 
       - main
 
