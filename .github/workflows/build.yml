@@ -7,7 +7,7 @@ on:
   push:
     paths: 
       - widgets/json/*.json
-      - widgets/templates/*.md
+      - widgets/templates/*
     branches-ignore: 
       - main
 
