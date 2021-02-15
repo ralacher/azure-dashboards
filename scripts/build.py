@@ -77,7 +77,7 @@ if __name__ == '__main__':
             # Increment x and y position to place the next widgets
             y_pos += 3
             if arm_index % 3 == 0:
-                x_pos += 3
+                x_pos += 4
                 y_pos = 0
             arm_template_data['resources'][0]['properties']['lenses']['0']['parts'][arm_index] = rendered_arm
 
