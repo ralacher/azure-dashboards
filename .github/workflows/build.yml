@@ -6,7 +6,7 @@ name: Build Markdown widgets
 on:
   push:
     paths: 
-      - widgets/json/*.json
+      - widgets/json/*
       - widgets/templates/*
     branches-ignore: 
       - main
