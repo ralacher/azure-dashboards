@@ -1,6 +1,6 @@
 {
   "name": "django",
-  "title": "Django",
+  "title": "Test",
   "subtitle": "Azure App Services",
   "description": "Simple Python web application using the Django framework. Demo leverages App Services, Key Vault, Storage, and Azure Database for PostgreSQL.",
   "cost": 1500,
