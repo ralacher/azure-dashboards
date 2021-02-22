@@ -61,29 +61,6 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "Test",
-                                                "subtitle": "Azure App Services",
-                                                "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/test.md"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-                            "2": {
-                                "position": {
-                                    "x": 3,
-                                    "y": 3,
-                                    "colSpan": 4,
-                                    "rowSpan": 3
-                                },
-                                "metadata": {
-                                    "inputs": [],
-                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
-                                    "settings": {
-                                        "content": {
-                                            "settings": {
-                                                "content": "",
                                                 "title": "Django",
                                                 "subtitle": "Azure App Services",
                                                 "markdownSource": 2,
@@ -96,30 +73,7 @@
                             "3": {
                                 "position": {
                                     "x": 3,
-                                    "y": 6,
-                                    "colSpan": 4,
-                                    "rowSpan": 3
-                                },
-                                "metadata": {
-                                    "inputs": [],
-                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
-                                    "settings": {
-                                        "content": {
-                                            "settings": {
-                                                "content": "",
-                                                "title": "Something",
-                                                "subtitle": "Azure App Services",
-                                                "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/test2.md"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-                            "4": {
-                                "position": {
-                                    "x": 7,
-                                    "y": 0,
+                                    "y": 3,
                                     "colSpan": 4,
                                     "rowSpan": 3
                                 },
