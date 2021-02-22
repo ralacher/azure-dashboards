@@ -16,7 +16,6 @@
     <img height="25px" src="https://aka.ms/deploytoazurebutton"/>
   </a>
 </span>
-
 <!-- Row 2 - Shields to display demo information -->
 <span style="display:block;text-align:center">
   <a href="{{ costLink }}">
