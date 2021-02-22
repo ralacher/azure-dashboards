@@ -1,0 +1,12 @@
+{
+  "name": "internal-aks",
+  "title": "VNET-Integrated Kubernetes",
+  "subtitle": "Kubernetes Service, App Gateway, API Management",
+  "description": "Demo using App Gateway, API Management, and Kubernetes Service. All services are firewalled off or deployed to a managed VNET.",
+  "cost": 281,
+  "time": 45,
+  "costLink": "https://azure.com/e/df1db9110991439491f0fbf93a373e66",
+  "armLink": "https://raw.githubusercontent.com/mullis623/iPaaSDemo/main/ArmTemplates/deployTemplate.json",
+  "documentationLink": "https://docs.microsoft.com/en-us/azure/aks/private-clusters",
+  "githubLink": "https://github.com/ralacher/azure-demos/tree/main/kubernetes/"
+}
