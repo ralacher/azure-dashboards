@@ -1,7 +1,7 @@
 {
   "name": "webapp-for-containers",
-  "title": "Web App Containers",
-  "subtitle": "App Service Webs App for Containers",
+  "title": "Python and Mongo",
+  "subtitle": "Webs App for Containers and Container Instances",
   "description": "Demo using App Gateway, API Management, and App Service Web App for Containers with a Mongo DB Container Instances backend. All services are firewalled off or deployed to a managed VNET.",
   "cost": 173,
   "time": 40,
