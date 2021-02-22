@@ -8,5 +8,5 @@
   "costLink": "https://azure.com/e/cc413153290a4d73a8e88d249b77fae0",
   "armLink": "https://raw.githubusercontent.com/mullis623/iPaaSDemo/main/ArmTemplates/deployTemplate.json",
   "documentationLink": "https://docs.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux",
-  "githubLink": "https://github.com/ralacher/azure-demos/tree/main/app-services"
+  "githubLink": "https://github.com/ralacher/azure-demos/tree/main/app-services/"
 }

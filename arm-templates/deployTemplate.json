@@ -70,10 +70,33 @@
                                     }
                                 }
                             },
-                            "3": {
+                            "2": {
                                 "position": {
                                     "x": 3,
                                     "y": 3,
+                                    "colSpan": 4,
+                                    "rowSpan": 3
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "",
+                                                "title": "Python and Mongo",
+                                                "subtitle": "Webs App for Containers and Container Instances",
+                                                "markdownSource": 2,
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/web-app-for-containers.md"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "3": {
+                                "position": {
+                                    "x": 3,
+                                    "y": 6,
                                     "colSpan": 4,
                                     "rowSpan": 3
                                 },
