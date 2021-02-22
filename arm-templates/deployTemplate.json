@@ -61,10 +61,10 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "VNET-Integrated Kubernetes",
+                                                "title": "Private Kubernetes",
                                                 "subtitle": "Kubernetes Service, App Gateway, API Management",
                                                 "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/internal-azure-kubernetes-service.md"
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/private-azure-kubernetes-service.md"
                                             }
                                         }
                                     }

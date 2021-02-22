@@ -9,14 +9,13 @@
   <a target="_self" href="">
     <img height="25px" src="https://opsgility.com/Images/azure-icons/azure-logo.png">
   </a>
-  <a href="mailto:?subject=VNET-Integrated Kubernetes-Kubernetes Service, App Gateway, API Management&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Faks%2Fprivate-clusters%0A%0AGitHub%20Code%0Ahttps%3A%2F%2Fgithub.com%2Fralacher%2Fazure-demos%2Ftree%2Fmain%2Fkubernetes%2F%0A%0ACost%20Estimate%0Ahttps%3A%2F%2Fazure.com%2Fe%2Fdf1db9110991439491f0fbf93a373e66">
+  <a href="mailto:?subject=Private Kubernetes-Kubernetes Service, App Gateway, API Management&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Faks%2Fprivate-clusters%0A%0AGitHub%20Code%0Ahttps%3A%2F%2Fgithub.com%2Fralacher%2Fazure-demos%2Ftree%2Fmain%2Fkubernetes%2F%0A%0ACost%20Estimate%0Ahttps%3A%2F%2Fazure.com%2Fe%2Fdf1db9110991439491f0fbf93a373e66">
     <img src="https://shields.io/static/v1?label=%F0%9F%93%A7&message=Share&color=brightgreen" height="25px"/>
   </a>
   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmullis623%2FiPaaSDemo%2Fmain%2FArmTemplates%2FdeployTemplate.json" target="_blank">
     <img height="25px" src="https://aka.ms/deploytoazurebutton"/>
   </a>
 </span>
-
 <!-- Row 2 - Shields to display demo information -->
 <span style="display:block;text-align:center">
   <a href="https://azure.com/e/df1db9110991439491f0fbf93a373e66">

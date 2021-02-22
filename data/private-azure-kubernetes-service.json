@@ -1,6 +1,6 @@
 {
-  "name": "internal-aks",
-  "title": "VNET-Integrated Kubernetes",
+  "name": "private-aks",
+  "title": "Private Kubernetes",
   "subtitle": "Kubernetes Service, App Gateway, API Management",
   "description": "Demo using App Gateway, API Management, and Kubernetes Service. All services are firewalled off or deployed to a managed VNET.",
   "cost": 281,
