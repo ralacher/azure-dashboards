@@ -4,7 +4,7 @@
   "subtitle": "Webs App for Containers and Container Instances",
   "description": "Demo using App Gateway, API Management, and App Service Web App for Containers with a Mongo DB Container Instances backend. All services are firewalled off or deployed to a managed VNET.",
   "cost": 173,
-  "time": 40,
+  "time": 45,
   "costLink": "https://azure.com/e/cc413153290a4d73a8e88d249b77fae0",
   "armLink": "https://raw.githubusercontent.com/mullis623/iPaaSDemo/main/ArmTemplates/deployTemplate.json",
   "documentationLink": "https://docs.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux",
