@@ -78,13 +78,6 @@
         },
         "defaultValue": ""
       },
-      "KV-AccessPolicy": {
-        "type": "string",
-        "metadata": {
-          "displayName": "Azure AD Group or User 'ObjectID' to grant permissions in Key Vault.(abc123de-f456-ghi7-89jk-l0mno123pqr4)",
-          "description": "KV-AccessPolicy"
-        }
-      },
       "LogAnalytics_DataRetention": {
         "type": "int",
         "metadata": {
