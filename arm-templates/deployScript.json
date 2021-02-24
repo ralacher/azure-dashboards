@@ -55,6 +55,7 @@
                 "scriptContent": "
 $Params = @{ 'Organization_Name'=${Env:Organization_Name}; 'AzureRegion'=${Env:Location};  }
 Install-Module -Name Az.ManagedServiceIdentity -Force
+Install-Module -Name Az.Blueprint -Force
 apt update && apt install git -y
 # Create UAI and assign it to the subscription
 $Id = New-AzUserAssignedIdentity -ResourceGroupName dashboards -Name ${Env:BlueprintName}
