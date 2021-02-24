@@ -54,7 +54,7 @@
                 ],
                 "scriptContent": "
 $Params = @{ 'Organization_Name'=${Env:Organization_Name}; 'AzureRegion'=${Env:Location};  }
-
+Install-Module -Name Az.ManagedServiceIdentity
 # Create UAI and assign it to the subscription
 $Id = New-AzUserAssignedIdentity -ResourceGroupName dashboards -Name ${Env:BlueprintName}
 $Subscription = '/subscriptions/{0}' -f ${Env:SubscriptionId}
