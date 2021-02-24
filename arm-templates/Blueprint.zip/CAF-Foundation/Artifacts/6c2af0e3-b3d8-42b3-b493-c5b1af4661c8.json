@@ -1,0 +1,105 @@
+{
+  "kind": "template",
+  "properties": {
+    "displayName": "Deploy Virtual Network",
+    "description": "Deploy a Virtual Network and subnets for services.",
+    "dependsOn": [],
+    "template": {
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "Organization_Name": {
+          "type": "string"
+        }
+      },
+      "variables": {
+        "vnet-name": "[concat(parameters('Organization_Name'), '-sharedsvcs-vnet')]"
+      },
+      "resources": [
+        {
+          "type": "Microsoft.Network/virtualNetworks",
+          "name": "[variables('vnet-name')]",
+          "apiVersion": "2020-07-01",
+          "location": "[resourceGroup().location]",
+          "properties": {
+            "addressSpace": {
+              "addressPrefixes": [
+                "10.0.0.0/8"
+              ]
+            },
+            "subnets": [
+              {
+                "name": "agw",
+                "properties": {
+                  "addressPrefix": "10.1.0.0/24",
+                  "serviceEndpoints": [
+                    {
+                      "service": "Microsoft.Web",
+                      "locations": [
+                        "*"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "api",
+                "properties": {
+                  "addressPrefix": "10.2.0.0/24",
+                  "serviceEndpoints": [
+                    {
+                      "service": "Microsoft.Web",
+                      "locations": [
+                        "*"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "app",
+                "properties": {
+                  "addressPrefix": "10.3.0.0/28",
+                  "delegations": [
+                    {
+                      "name": "delegation",
+                      "properties": {
+                        "serviceName": "Microsoft.Web/serverfarms"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "aci",
+                "properties": {
+                  "addressPrefix": "10.4.0.0/24",
+                  "delegations": [
+                    {
+                      "name": "delegation",
+                      "properties": {
+                        "serviceName": "Microsoft.ContainerInstance/containerGroups"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "vm",
+                "properties": {
+                  "addressPrefix": "10.5.0.0/24"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "resourceGroup": "Network-RG",
+    "parameters": {
+      "Organization_Name": {
+        "value": "[parameters('Organization_Name')]"
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "properties": {
+    "displayName": "CAF Foundation",
+    "description": "Microsoft Cloud Adoption Framework for Azure – Configure Foundational best practices",
+    "targetScope": "subscription",
+    "parameters": {
+      "Policy_CostCenter_Tag": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Append CostCenter TAG & its value from the Resource Group",
+          "description": "AzureRegion"
+        },
+        "defaultValue": "P-1234",
+        "allowedValues": []
+      },
+      "Policy_Allowed-Locations": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Which Azure Regions will you allow resources to be built in?",
+          "description": "Policy_Allowed-Locations",
+          "strongType": "location"
+        },
+        "defaultValue": [
+          "East US 2",
+          "West US",
+          "Central US"
+        ]
+      },
+      "Policy_Resource-Types-DENY": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Select the Azure Resource Types that you will DENY",
+          "description": "Policy_Resource-Types-DENY",
+          "strongType": "resourceTypes"
+        }
+      },
+      "Policy_Allowed-StorageAccount-SKUs": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Storage Account SKUs you want to ALLOW",
+          "description": "Policy_Allowed-StorageAccount-SKUs",
+          "strongType": "storageSKUs"
+        },
+        "defaultValue": [
+          "Standard_LRS"
+        ],
+        "allowedValues": [
+          "Premium_LRS",
+          "Standard_GRS",
+          "Standard_LRS",
+          "Standard_RAGRS",
+          "Standard_ZRS"
+        ]
+      },
+      "Policy_Allowed-VM-SKUs": {
+        "type": "array",
+        "metadata": {
+          "displayName": "Virtual Machine SKUs you want to ALLOW",
+          "description": "Policy_Allowed-VM-SKUs"
+        },
+        "defaultValue": [
+          "Standard_B2ms",
+          "Standard_DS1_v2",
+          "Standard_F2s_v2"
+        ],
+        "allowedValues": [
+          "Standard_B2ms",
+          "Standard_DS1_v2",
+          "Standard_F2s_v2"
+        ]
+      },
+      "Organization_Name": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Enter your organization name (e.g. Contoso), must be unique",
+          "description": "Organization_Name"
+        },
+        "defaultValue": ""
+      },
+      "KV-AccessPolicy": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Azure AD Group or User 'ObjectID' to grant permissions in Key Vault.(abc123de-f456-ghi7-89jk-l0mno123pqr4)",
+          "description": "KV-AccessPolicy"
+        }
+      },
+      "LogAnalytics_DataRetention": {
+        "type": "int",
+        "metadata": {
+          "displayName": "Number of days data will be retained in Log Analytics",
+          "description": "LogAnalytics_DataRetention"
+        },
+        "defaultValue": 30,
+        "allowedValues": [
+          30,
+          60,
+          90,
+          120,
+          180,
+          365
+        ]
+      },
+      "AzureRegion": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Select the Azure Region to deploy the Resources",
+          "description": "AzureRegion",
+          "strongType": "location"
+        },
+        "defaultValue": "East US 2"
+      }
+    },
+    "resourceGroups": {
+      "SharedServices-RG": {
+        "name": "SharedSvcs-rg",
+        "location": "[parameters('AzureRegion')]",
+        "metadata": {
+          "displayName": "Resource Group for Shared Services"
+        },
+        "dependsOn": []
+      },
+      "Network-RG": {
+        "name": "VNet-rg",
+        "location": "[parameters('AzureRegion')]",
+        "metadata": {
+          "displayName": "Resource Group for Networks"
+        },
+        "dependsOn": []
+      },
+      "Identity-RG": {
+        "name": "Identity-rg",
+        "location": "[parameters('AzureRegion')]",
+        "metadata": {
+          "displayName": "Resource Group for Identity Services"
+        },
+        "dependsOn": []
+      }
+    }
+  }
+}
