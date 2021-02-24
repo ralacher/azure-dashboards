@@ -32,7 +32,8 @@
           "displayName": "Select the Azure Resource Types that you will DENY",
           "description": "Policy_Resource-Types-DENY",
           "strongType": "resourceTypes"
-        }
+        },
+        "defaultValue": []
       },
       "Policy_Allowed-StorageAccount-SKUs": {
         "type": "array",
