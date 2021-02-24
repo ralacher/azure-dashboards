@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "blueprintName": {
+            "type": "string",
+            "defaultValue": "CAF-Foundation"
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "East US 2"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+            "name": "[parameters('blueprintName')]",
+            "apiVersion": "2018-11-30",
+            "location": "[parameters('location')]"
+        }
+    ]
+}
