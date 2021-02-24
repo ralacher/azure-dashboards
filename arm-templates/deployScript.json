@@ -52,7 +52,7 @@
                 git clone https://github.com/ralacher/azure-dashboards.git
                 cd azure-dashboards/arm-templates/Blueprint.zip
                 Import-AzBlueprintWithArtifact -Name ${Env:BlueprintName} -SubscriptionId ${Env:SubscriptionId} -InputPath CAF-Foundation -Force
-                $bp = Get-AzBlueprint | Where-Object {$_.Name -eq ${Env:BlueprintName} -And $_.SubscriptionId -eq ${Env:SubscriptionId }
+                $bp = Get-AzBlueprint | Where-Object {$_.Name -eq ${Env:BlueprintName} -And $_.SubscriptionId -eq ${Env:SubscriptionId}
                 $version = $bp.BlueprintId.Split('/')[-1].Split('.')
                 $year = $version[0]
                 $month = $version[1]
