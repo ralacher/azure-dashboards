@@ -19,5 +19,15 @@
             "apiVersion": "2018-11-30",
             "location": "[parameters('location')]"
         }
-    ]
+    ],
+    "outputs": {
+        "principalId": {
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('blueprintName'))).principalId]"
+        },
+        "resourceId": {
+            "type": "string",
+            "value": "[resourceID('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('blueprintName'))]"
+        }
+    }
 }
