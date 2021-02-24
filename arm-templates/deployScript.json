@@ -41,7 +41,7 @@
                     },
                     {
                         "name": "SubscriptionId",
-                        "value": "[subscription().id]"
+                        "value": "[subscription().subscriptionId]"
                     },
                     {
                         "name": "Location",
