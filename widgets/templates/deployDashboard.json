@@ -46,6 +46,73 @@
                     }
                   }
                 }
+              },
+              "1": {
+                "position": {
+                  "x": 3,
+                  "y": 0,
+                  "colSpan": 2,
+                  "rowSpan": 2
+                },
+                "metadata": {
+                  "inputs": [],
+                  "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                  "settings": {
+                    "content": {
+                      "settings": {
+                        "content": "<span style=\"display:block;text-align:center\">\n<img height=\"95px\" src=\"https://github.com/ralacher/azure-dashboards/blob/main/images/blueprint.png?raw=true\" />\n</span>",
+                        "title": "Cloud Adoption Framework",
+                        "subtitle": "Governance and Policy",
+                        "markdownSource": 1
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "position": {
+                  "x": 3,
+                  "y": 2,
+                  "colSpan": 2,
+                  "rowSpan": 2
+                },
+                "metadata": {
+                  "inputs": [],
+                  "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                  "settings": {
+                    "content": {
+                      "settings": {
+                        "content": "<br><br>\n<span style=\"display:block;text-align:center\">\n<a href=\"https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fralacher%2Fazure-dashboards%2Fmain%2Farm-templates%2Fcaf-blueprint%2FdeploySubscription.json target=\"_blank\">\n    <img height=\"25px\" src=\"https://aka.ms/deploytoazurebutton\"/>\n  </a>\n  </span>",
+                        "title": "Setup",
+                        "subtitle": "Policies and Resources",
+                        "markdownSource": 1
+                      }
+                    }
+                  }
+                }
+              },
+              "3": {
+                "position": {
+                  "x": 3,
+                  "y": 4,
+                  "colSpan": 2,
+                  "rowSpan": 2
+                },
+                "metadata": {
+                  "inputs": [],
+                  "type": "Extension/HubsExtension/PartType/ArmActions",
+                  "settings": {
+                    "content": {
+                      "settings": {
+                        "title": "Cleanup",
+                        "subtitle": "Remove CAF Resources",
+                        "uri": "https://google.com",
+                        "name": "Delete",
+                        "data": ""
+                      }
+                    }
+                  }
+                }
               }
             }
           }

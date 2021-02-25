@@ -64,8 +64,10 @@ if __name__ == '__main__':
         arm_template_data = json.load(file_object)
         clean()
 
-        x_pos = 3
+        x_pos = 5
         y_pos = 0
+        arm_pos = max([int(i) for i in arm_template_data['resources'][0]['properties']['lenses']['0']['parts'].keys()]) + 1
+        print(arm_pos)
         for index, widget in enumerate(os.listdir(os.path.join(WORKDIR, 'data')), 1):
             widget_name = widget.replace('.json', '')
             json_data = read_widget(widget)
@@ -89,7 +91,7 @@ if __name__ == '__main__':
             if index % 3 == 0:
                 x_pos += 4
                 y_pos = 0
-            arm_template_data['resources'][0]['properties']['lenses']['0']['parts'][index] = rendered_arm
-
+            arm_template_data['resources'][0]['properties']['lenses']['0']['parts'][arm_pos] = rendered_arm
+            arm_pos += 1
     with open('arm-templates/deployDashboard.json', 'w') as file_object:
         json.dump(arm_template_data, file_object, indent=4)
