@@ -1,7 +1,7 @@
 <!-- Row 1 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="https://docs.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app">
-    <img width="25px" src="https://github.com/ralacher/azure-dashboards/blob/main/widgets/images/microsoft.png">
+    <img width="25px" src="https://github.com/ralacher/azure-dashboards/blob/main/widgets/images/microsoft.png?raw=true">
   </a>
   <a href="https://github.com/ralacher/djangoapp">
     <img width="25px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
