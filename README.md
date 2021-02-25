@@ -9,4 +9,4 @@ This repo contains the build scripts, JSON configurations, and Azure Dashboard M
 
 See the [Contribution guide](CONTRIBUTING.md) for how to use or contribute to this repo.
 
-![Dashboard](images/dashboard.png)
+![Dashboard](widgets/images/dashboard.png)
