@@ -51,7 +51,7 @@ jobs:
         subscriptionId: ${{ env.SUBSCRIPTION_ID }}
         region: eastus2
         resourceGroupName: dashboards
-        template: arm-templates/deployTemplate.json
+        template: arm-templates/deployDashboard.json
         deploymentMode: Validate
         deploymentName: Dashboard
   

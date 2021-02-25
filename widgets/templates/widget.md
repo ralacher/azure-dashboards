@@ -6,9 +6,6 @@
   <a href="{{ githubLink }}">
     <img width="25px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
   </a>
-  <a target="_self" href="">
-    <img height="25px" src="https://opsgility.com/Images/azure-icons/azure-logo.png">
-  </a>
   <a href="mailto:?subject={{ title }}-{{ subtitle }}&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0A{{ documentationLink | urlencode | replace ("/", "%2F") }}%0A%0AGitHub%20Code%0A{{ githubLink | urlencode | replace ("/", "%2F") }}%0A%0ACost%20Estimate%0A{{ costLink | urlencode | replace ("/", "%2F") }}">
     <img src="https://freepngimg.com/thumb/logo/64838-icons-symbol-envelope-computer-mail-logo-email.png" height="25px"/>
   </a>

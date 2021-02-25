@@ -15,7 +15,7 @@
 					"title": "{{ title }}",
 					"subtitle": "{{ subtitle }}",
 					"markdownSource": 2,
-					"markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/{{ widgetName }}"
+					"markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/{{ widgetName }}"
 				}
 			}
 		}

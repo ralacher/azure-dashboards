@@ -6,9 +6,6 @@
   <a href="https://github.com/ralacher/djangoapp">
     <img width="25px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
   </a>
-  <a target="_self" href="">
-    <img height="25px" src="https://opsgility.com/Images/azure-icons/azure-logo.png">
-  </a>
   <a href="mailto:?subject=Django-Azure App Services&body=Links%20from%20our%20discussion%20today.%0A%0ADocumentation%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fapp-service%2Ftutorial-python-postgresql-app%0A%0AGitHub%20Code%0Ahttps%3A%2F%2Fgithub.com%2Fralacher%2Fdjangoapp%0A%0ACost%20Estimate%0Ahttps%3A%2F%2Fazure.com%2Fe%2F387d14da667d4363ab0c75c809ea49b3">
     <img src="https://freepngimg.com/thumb/logo/64838-icons-symbol-envelope-computer-mail-logo-email.png" height="25px"/>
   </a>

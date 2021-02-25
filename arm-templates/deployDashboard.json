@@ -61,10 +61,10 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "Private Kubernetes",
-                                                "subtitle": "Kubernetes Service, App Gateway, API Management",
+                                                "title": "Django",
+                                                "subtitle": "Azure App Services",
                                                 "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/private-azure-kubernetes-service.md"
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/django.md"
                                             }
                                         }
                                     }
@@ -84,10 +84,10 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "Django",
-                                                "subtitle": "Azure App Services",
+                                                "title": "iPaaS",
+                                                "subtitle": "Integration Platform as a Service",
                                                 "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/django.md"
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/ipaas.md"
                                             }
                                         }
                                     }
@@ -107,10 +107,10 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "Python and Mongo",
-                                                "subtitle": "Webs App for Containers and Container Instances",
+                                                "title": "Private Kubernetes",
+                                                "subtitle": "Kubernetes Service, App Gateway, API Management",
                                                 "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/web-app-for-containers.md"
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/private-azure-kubernetes-service.md"
                                             }
                                         }
                                     }
@@ -130,10 +130,10 @@
                                         "content": {
                                             "settings": {
                                                 "content": "",
-                                                "title": "iPaaS",
-                                                "subtitle": "Integration Platform as a Service",
+                                                "title": "Python and Mongo",
+                                                "subtitle": "Webs App for Containers and Container Instances",
                                                 "markdownSource": 2,
-                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/ipaas.md"
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/web-app-for-containers.md"
                                             }
                                         }
                                     }
