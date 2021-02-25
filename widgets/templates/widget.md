@@ -1,7 +1,7 @@
 <!-- Row 1 - Links to Azure documentation, GitHub, and Share -->
 <span style="display:block;text-align:center">
   <a href="{{ documentationLink }}">
-    <img width="25px" src="http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Microsoft-Logo-Icon-PNG-Transparent.png">
+    <img width="25px" src="https://github.com/ralacher/azure-dashboards/blob/main/widgets/images/microsoft.png">
   </a>
   <a href="{{ githubLink }}">
     <img width="25px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
