@@ -31,7 +31,7 @@
                     }
                 },
                 "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/deployMsi.json",
+                    "uri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf-blueprint/deployMsi.json",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -69,7 +69,7 @@
                     }
                 },
                 "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/deployScript.json",
+                    "uri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf-blueprint/deployScript.json",
                     "contentVersion": "1.0.0.0"
                 }
             }
