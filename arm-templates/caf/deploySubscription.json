@@ -112,6 +112,10 @@
                         "resourceId": {
                             "type": "string",
                             "value": "[resourceID('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('Identity'))]"
+                        },
+                        "accountKey": {
+                            "type": "securestring",
+                            "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('Storage')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value]"
                         }
                     }
                 }
@@ -152,7 +156,7 @@
                             "identity": {
                                 "type": "UserAssigned",
                                 "userAssignedIdentities": {
-                                    "[reference('CreateIdentity').outputs.resourceId.value]": {}
+                                    "[reference('CreateFoundation').outputs.resourceId.value]": {}
                                 }
                             },
                             "properties": {
@@ -189,7 +193,11 @@
                                     },
                                     {
                                         "name": "ARM_CLIENT_ID",
-                                        "value": "[reference('CreateIdentity').outputs.clientId.value]"
+                                        "value": "[reference('CreateFoundation').outputs.clientId.value]"
+                                    },
+                                    {
+                                        "name": "ARM_ACCESS_KEY",
+                                        "value": "[reference('CreateFoundation').outputs.accessKey.value]"
                                     }
                                 ],
                                 "primaryScriptUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/terraform.sh",
