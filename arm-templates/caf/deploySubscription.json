@@ -14,7 +14,8 @@
         }
     },
     "variables": {
-        "Identity": "CAF-Identity"
+        "Identity": "CAF-Identity",
+        "Storage": "[toLower(concat(parameters('Organization'), 'cafoundation', uniqueString(subscription().subscriptionId)))]"
     },
     "resources": [
         {
@@ -24,7 +25,7 @@
             "location": "[parameters('Location')]"
         },
         {
-            "name": "CreateIdentity",
+            "name": "CreateFoundation",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-10-01",
             "resourceGroup": "Identity-RG",
@@ -40,8 +41,14 @@
                     "Location": {
                         "value": "[parameters('Location')]"
                     },
+                    "Organization": {
+                        "value": "[parameters('Organization')]"
+                    },
                     "Identity": {
                         "value": "[variables('Identity')]"
+                    },
+                    "Storage": {
+                        "value": "[variables('Storage')]"
                     }
                 },
                 "template": {
@@ -51,7 +58,13 @@
                         "Location": {
                             "type": "string"
                         },
+                        "Organization": {
+                            "type": "string"
+                        },
                         "Identity": {
+                            "type": "string"
+                        },
+                        "Storage": {
                             "type": "string"
                         }
                     },
@@ -61,12 +74,40 @@
                             "name": "CAF-Identity",
                             "apiVersion": "2018-11-30",
                             "location": "[parameters('Location')]"
+                        },
+                        {
+                            "type": "Microsoft.Storage/storageAccounts",
+                            "apiVersion": "2019-06-01",
+                            "name": "[parameters('Storage')]",
+                            "location": "[parameters('Location')]",
+                            "sku": {
+                                "name": "Standard_LRS",
+                                "tier": "Standard"
+                            },
+                            "kind": "StorageV2",
+                            "properties": {
+                                "accessTier": "Hot"
+                            },
+                            "resources": [
+                                {
+                                    "type": "blobServices/containers",
+                                    "apiVersion": "2019-06-01",
+                                    "name": "[concat('default/', 'tfstate')]",
+                                    "dependsOn": [
+                                        "[parameters('Storage')]"
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "outputs": {
                         "principalId": {
                             "type": "string",
                             "value": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('Identity'))).principalId]"
+                        },
+                        "clientId": {
+                            "type": "string",
+                            "value": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('Identity'))).clientId]"
                         },
                         "resourceId": {
                             "type": "string",
@@ -82,7 +123,7 @@
             "apiVersion": "2020-04-01-preview",
             "properties": {
                 "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
-                "principalId": "[reference('CreateIdentity').outputs.principalId.value]",
+                "principalId": "[reference('CreateFoundation').outputs.clientId.value]",
                 "principalType": "ServicePrincipal",
                 "scope": "[subscription().id]"
             }
@@ -127,6 +168,10 @@
                                         "value": "[parameters('Organization')]"
                                     },
                                     {
+                                        "name": "STORAGE_ACCOUNT_NAME",
+                                        "value": "[variables('Storage')]"
+                                    },
+                                    {
                                         "name": "TF_VAR_location",
                                         "value": "[parameters('Location')]"
                                     },
@@ -144,7 +189,7 @@
                                     },
                                     {
                                         "name": "ARM_CLIENT_ID",
-                                        "value": "[reference('CreateIdentity').outputs.principalId.value]"
+                                        "value": "[reference('CreateIdentity').outputs.clientId.value]"
                                     }
                                 ],
                                 "primaryScriptUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/terraform.sh",
