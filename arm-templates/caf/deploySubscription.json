@@ -10,12 +10,13 @@
             "type": "string",
             "metadata": {
                 "description": "Unique value to be used for resource names"
-            }
+            },
+            "maxLength": 3
         }
     },
     "variables": {
         "Identity": "CAF-Identity",
-        "Storage": "[toLower(concat(parameters('Organization'), 'cafoundation', uniqueString(subscription().subscriptionId)))]"
+        "Storage": "[toLower(concat(parameters('Organization'), 'caf', uniqueString(subscription().subscriptionId)))]"
     },
     "resources": [
         {
@@ -114,8 +115,8 @@
                             "value": "[resourceID('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('Identity'))]"
                         },
                         "accountKey": {
-                            "type": "securestring",
-                            "value": "[listKeys(parameters('Storage'), '2019-04-01').keys[0].value]"
+                            "type": "string",
+                            "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('Storage')), '2019-04-01').keys[0].value]"
                         }
                     }
                 }
@@ -127,7 +128,7 @@
             "apiVersion": "2020-04-01-preview",
             "properties": {
                 "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
-                "principalId": "[reference('CreateFoundation').outputs.clientId.value]",
+                "principalId": "[reference('CreateFoundation').outputs.principalId.value]",
                 "principalType": "ServicePrincipal",
                 "scope": "[subscription().id]"
             }
@@ -197,7 +198,7 @@
                                     },
                                     {
                                         "name": "ARM_ACCESS_KEY",
-                                        "value": "[reference('CreateFoundation').outputs.accessKey.value]"
+                                        "value": "[reference('CreateFoundation').outputs.accountKey.value]"
                                     }
                                 ],
                                 "primaryScriptUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/terraform.sh",
@@ -211,7 +212,7 @@
                                     "https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip"
                                 ],
                                 "timeout": "PT30M",
-                                "cleanupPreference": "Always",
+                                "cleanupPreference": "OnSuccess",
                                 "retentionInterval": "P1D"
                             }
                         }

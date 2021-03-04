@@ -12,7 +12,7 @@ terraform {
   backend "azurerm" {
     resource_group_name   = "Identity-RG"
     storage_account_name  = "STORAGE_ACCOUNT_NAME"
-    container_name        = "tstate"
+    container_name        = "tfstate"
     key                   = "foundation.tfstate"
   }
 }
