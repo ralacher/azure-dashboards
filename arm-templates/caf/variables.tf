@@ -8,3 +8,7 @@ variable "tags" {
     CostCenter = "P-1234"
   }
 }
+
+variable "organization" {
+  type = string
+}

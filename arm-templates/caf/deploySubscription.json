@@ -165,20 +165,16 @@
                                 "azCliVersion": "2.9.1",
                                 "environmentVariables": [
                                     {
-                                        "name": "Location",
-                                        "value": "[parameters('Location')]"
-                                    },
-                                    {
-                                        "name": "Organization",
-                                        "value": "[parameters('Organization')]"
-                                    },
-                                    {
                                         "name": "STORAGE_ACCOUNT_NAME",
                                         "value": "[variables('Storage')]"
                                     },
                                     {
                                         "name": "TF_VAR_location",
                                         "value": "[parameters('Location')]"
+                                    },
+                                    {
+                                        "name": "TF_VAR_organization",
+                                        "value": "[parameters('Organization')]"
                                     },
                                     {
                                         "name": "ARM_USE_MSI",

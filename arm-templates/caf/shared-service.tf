@@ -24,13 +24,13 @@ resource "azurerm_key_vault" "caf-keyvault" {
   soft_delete_retention_days  = 7
   purge_protection_enabled    = false
   sku_name                    = "standard"
-  access_policy {
+  /*access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
     object_id = data.azurerm_client_config.current.object_id
     secret_permissions = [
       "Get", "List", "Set", "Delete"
     ]
-  }
+  }*/
 }
 
 resource "azurerm_log_analytics_workspace" "caf-loganalytics" {
