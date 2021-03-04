@@ -201,14 +201,13 @@
                                 "supportingScriptUris": [
                                     "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/main.tf",
                                     "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/network.tf",
-                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/security-groups.tf",
                                     "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/shared-service.tf",
                                     "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/variables.tf",
                                     "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/web.tf",
                                     "https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip"
                                 ],
                                 "timeout": "PT30M",
-                                "cleanupPreference": "OnSuccess",
+                                "cleanupPreference": "Always",
                                 "retentionInterval": "P1D"
                             }
                         }
