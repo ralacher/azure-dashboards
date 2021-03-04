@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "shared-service" {
 }
 
 resource "azurerm_automation_account" "caf-automation" {
-  name                = "CAF-${var.organization}-Automation-${random_integer.uniq.result}"
+  name                = "CAF-Automation-${var.organization}-${random_integer.uniq.result}"
   location            = azurerm_resource_group.shared-service.location
   resource_group_name = azurerm_resource_group.shared-service.name
   sku_name            = "Basic"
@@ -16,7 +16,7 @@ resource "azurerm_automation_account" "caf-automation" {
 }
 
 resource "azurerm_key_vault" "caf-keyvault" {
-  name                        = "CAF-${var.organization}-KeyVault-${random_integer.uniq.result}"
+  name                        = "CAF-KeyVault-${var.organization}-${random_integer.uniq.result}"
   location                    = azurerm_resource_group.shared-service.location
   resource_group_name         = azurerm_resource_group.shared-service.name
   enabled_for_disk_encryption = true
@@ -34,14 +34,9 @@ resource "azurerm_key_vault" "caf-keyvault" {
 }
 
 resource "azurerm_log_analytics_workspace" "caf-loganalytics" {
-  name                = "CAF-LogAnalytics-${random_integer.uniq.result}"
+  name                = "CAF-LogAnalytics-${var.organization}-${random_integer.uniq.result}"
   location            = azurerm_resource_group.shared-service.location
   resource_group_name = azurerm_resource_group.shared-service.name
   sku                 = "PerGB2018"
   retention_in_days   = 30
-}
-
-resource "azurerm_security_center_workspace" "example" {
-  scope        = data.azurerm_subscription.current.id
-  workspace_id = azurerm_log_analytics_workspace.caf-loganalytics.id
 }
