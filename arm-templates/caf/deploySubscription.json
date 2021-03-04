@@ -1,0 +1,169 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "Location": {
+            "type": "string",
+            "defaultValue": "East US 2"
+        },
+        "Organization": {
+            "type": "string",
+            "metadata": {
+                "description": "Unique value to be used for resource names"
+            }
+        }
+    },
+    "variables": {
+        "Identity": "CAF-Identity"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2020-06-01",
+            "name": "Identity-RG",
+            "location": "[parameters('Location')]"
+        },
+        {
+            "name": "CreateIdentity",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "resourceGroup": "Identity-RG",
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/resourceGroups', 'Identity-RG')]"
+            ],
+            "properties": {
+                "expressionEvaluationOptions": {
+                    "scope": "inner"
+                },
+                "mode": "Incremental",
+                "parameters": {
+                    "Location": {
+                        "value": "[parameters('Location')]"
+                    },
+                    "Identity": {
+                        "value": "[variables('Identity')]"
+                    }
+                },
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "Location": {
+                            "type": "string"
+                        },
+                        "Identity": {
+                            "type": "string"
+                        }
+                    },
+                    "resources": [
+                        {
+                            "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+                            "name": "CAF-Identity",
+                            "apiVersion": "2018-11-30",
+                            "location": "[parameters('Location')]"
+                        }
+                    ],
+                    "outputs": {
+                        "principalId": {
+                            "type": "string",
+                            "value": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('Identity'))).principalId]"
+                        },
+                        "resourceId": {
+                            "type": "string",
+                            "value": "[resourceID('Microsoft.ManagedIdentity/userAssignedIdentities/', parameters('Identity'))]"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "[guid(parameters('Location'))]",
+            "type": "Microsoft.Authorization/roleAssignments",
+            "apiVersion": "2020-04-01-preview",
+            "properties": {
+                "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
+                "principalId": "[reference('CreateIdentity').outputs.principalId.value]",
+                "principalType": "ServicePrincipal",
+                "scope": "[subscription().id]"
+            }
+        },
+        {
+            "name": "DeployBaseline",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "resourceGroup": "Identity-RG",
+            "dependsOn": [
+                "[resourceId('Microsoft.Authorization/roleAssignments', guid(parameters('Location')))]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "variables": {},
+                    "resources": [
+                        {
+                            "type": "Microsoft.Resources/deploymentScripts",
+                            "apiVersion": "2020-10-01",
+                            "name": "RunTerraform",
+                            "location": "[parameters('Location')]",
+                            "kind": "AzureCLI",
+                            "identity": {
+                                "type": "UserAssigned",
+                                "userAssignedIdentities": {
+                                    "[reference('CreateIdentity').outputs.resourceId.value]": {}
+                                }
+                            },
+                            "properties": {
+                                "forceUpdateTag": "1",
+                                "azCliVersion": "2.9.1",
+                                "environmentVariables": [
+                                    {
+                                        "name": "Location",
+                                        "value": "[parameters('Location')]"
+                                    },
+                                    {
+                                        "name": "Organization",
+                                        "value": "[parameters('Organization')]"
+                                    },
+                                    {
+                                        "name": "TF_VAR_location",
+                                        "value": "[parameters('Location')]"
+                                    },
+                                    {
+                                        "name": "ARM_USE_MSI",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "name": "ARM_TENANT_ID",
+                                        "value": "[subscription().tenantId]"
+                                    },
+                                    {
+                                        "name": "ARM_SUBSCRIPTION_ID",
+                                        "value": "[subscription().subscriptionId]"
+                                    },
+                                    {
+                                        "name": "ARM_CLIENT_ID",
+                                        "value": "[reference('CreateIdentity').outputs.principalId.value]"
+                                    }
+                                ],
+                                "primaryScriptUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/terraform.sh",
+                                "supportingScriptUris": [
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/main.tf",
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/network.tf",
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/security-groups.tf",
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/shared-service.tf",
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/variables.tf",
+                                    "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/arm-templates/caf/web.tf"
+                                ],
+                                "timeout": "PT30M",
+                                "cleanupPreference": "Always",
+                                "retentionInterval": "P1D"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
