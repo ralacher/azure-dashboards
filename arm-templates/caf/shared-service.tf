@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "shared-service" {
 }
 
 resource "azurerm_automation_account" "caf-automation" {
-  name                = "CAF-Automation"
+  name                = "CAF-${var.organization}-Automation-${random_integer.uniq.result}"
   location            = azurerm_resource_group.shared-service.location
   resource_group_name = azurerm_resource_group.shared-service.name
   sku_name            = "Basic"
@@ -16,7 +16,7 @@ resource "azurerm_automation_account" "caf-automation" {
 }
 
 resource "azurerm_key_vault" "caf-keyvault" {
-  name                        = "CAF-KeyVault"
+  name                        = "CAF-${var.organization}-KeyVault-${random_integer.uniq.result}"
   location                    = azurerm_resource_group.shared-service.location
   resource_group_name         = azurerm_resource_group.shared-service.name
   enabled_for_disk_encryption = true
@@ -34,7 +34,7 @@ resource "azurerm_key_vault" "caf-keyvault" {
 }
 
 resource "azurerm_log_analytics_workspace" "caf-loganalytics" {
-  name                = "CAF-LogAnalytics"
+  name                = "CAF-LogAnalytics-${random_integer.uniq.result}"
   location            = azurerm_resource_group.shared-service.location
   resource_group_name = azurerm_resource_group.shared-service.name
   sku                 = "PerGB2018"

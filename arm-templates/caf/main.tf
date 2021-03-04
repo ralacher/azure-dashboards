@@ -8,6 +8,10 @@ terraform {
       source  = "hashicorp/azuread"
       version = "=1.4.0"
     }
+    random = {
+      source = "hashicorp/random"
+      version = "=3.1.0"
+    }
   }
   backend "azurerm" {
     resource_group_name   = "Identity-RG"
@@ -17,8 +21,13 @@ terraform {
   }
 }
 
-provider "azuread" {
-}
 provider "azurerm" {
   features {}
+}
+provider "azuread" {}
+provider "random" {}
+
+resource "random_integer" "uniq" {
+  min = 10
+  max = 99
 }
