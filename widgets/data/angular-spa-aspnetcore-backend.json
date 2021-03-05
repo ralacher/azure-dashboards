@@ -6,7 +6,7 @@
   "cost": 70,
   "time": 6,
   "costLink": "https://azure.com/e/7a8c6d5e92594e149a0ce6fe368cb04b",
-  "armLink": "https://raw.githubusercontent.com/ralacher/azure-demos/main/managed-applications/deployTemplate.json",
+  "armLink": "https://raw.githubusercontent.com/ralacher/azure-demos/main/app-services/azure-ad-auth/deployTemplate.json",
   "documentationLink": "https://github.com/Azure-Samples/ms-identity-javascript-angular-spa-dotnetcore-webapi-roles-groups/tree/master/chapter1",
   "githubLink": "https://github.com/Azure-Samples/ms-identity-javascript-angular-spa-dotnetcore-webapi-roles-groups/tree/master/chapter1"
 }
