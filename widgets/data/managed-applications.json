@@ -1,0 +1,12 @@
+{
+  "name": "managed-applications",
+  "title": "Azure Service Catalog",
+  "subtitle": "using Managed Applications",
+  "description": "Managed Applications allow organizations to create a catalog of approved solutions. This creates sample Managed Applications with custom UI screens and features.",
+  "cost": 1,
+  "time": 6,
+  "costLink": "https://azure.com/e/93080099c53e4d02a4cc43539a4a9f32",
+  "armLink": "https://raw.githubusercontent.com/ralacher/azure-demos/main/managed-applications/deployTemplate.json",
+  "documentationLink": "https://docs.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/overview",
+  "githubLink": "https://github.com/ralacher/azure-demos/tree/main/managed-applications/"
+}
