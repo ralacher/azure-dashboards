@@ -60,7 +60,7 @@
                                     "settings": {
                                         "content": {
                                             "settings": {
-                                                "content": "<span style=\"display:block;text-align:center\">\n<img height=\"95px\" src=\"https://github.com/ralacher/azure-dashboards/blob/main/images/blueprint.png?raw=true\" />\n</span>",
+                                                "content": "<span style=\"display:block;text-align:center\">\n<img height=\"95px\" src=\"https://github.com/ralacher/azure-dashboards/blob/main/widgets/images/blueprint.png?raw=true\" />\n</span>",
                                                 "title": "Cloud Adoption Framework",
                                                 "subtitle": "Governance and Policy",
                                                 "markdownSource": 1
