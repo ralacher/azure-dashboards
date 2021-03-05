@@ -228,6 +228,29 @@
                                         }
                                     }
                                 }
+                            },
+                            "9": {
+                                "position": {
+                                    "x": 9,
+                                    "y": 6,
+                                    "colSpan": 4,
+                                    "rowSpan": 3
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "",
+                                                "title": "Azure Service Catalog",
+                                                "subtitle": "using Managed Applications",
+                                                "markdownSource": 2,
+                                                "markdownUri": "https://raw.githubusercontent.com/ralacher/azure-dashboards/main/widgets/markdown/managed-applications.md"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
