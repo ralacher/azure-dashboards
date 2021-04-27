@@ -1,7 +1,7 @@
 # Azure Dashboards for Demos and Labs
 [![Build](https://github.com/ralacher/azure-dashboards/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/ralacher/azure-dashboards/actions/workflows/build-and-deploy.yml)
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fralacher%2Fazure-dashboards%2Fmain%2Farm-templates%2FdeployTemplate.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fralacher%2Fazure-dashboards%2Fmain%2Farm-templates%2FdeployDashboard.json" target="_blank">
   <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 
